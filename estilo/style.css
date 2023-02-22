@@ -1,0 +1,99 @@
+@charset "UFT-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+*{  /*Configuração geral para todos os elementos*/
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+html, body{
+    min-height: 100vh; /*Mínimo da altura do view height. Dá pra usar também vw que é o view width.*/
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1{
+    padding-top: 50px;
+    /*text-transform: uppercase;*/ /*Colocar todas as letras em maiúsculo.*/
+    font-variant: small-caps; /*Deixa tudo maiúsculo mas a primeira letra fica maior um pouco e as outras menores.*/
+    font-family: var(--fonte2);
+    font-size: 10vw; /*Não é a melhor maneira, porém foi o que foi ensinado. Deixar a letra de adaptar para 10% da largura da tela.*/
+}
+
+header > p{
+    padding-bottom: 50px;
+}
+
+a{ /*Configuração dos links*/
+    color: white;
+    text-decoration: none; /*TIrando o sublinhado*/
+    font-weight: bold; /*Colocando em negrito*/
+}
+
+a:hover{ /*Quando passar o mouse por cima do link.*/
+    text-decoration: underline;
+}
+
+section{ /*Aqui estou fazendo configurações em todas as sections.*/
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em; /*Altura da linha, para separar um pouco.*/
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section > p{
+    padding-bottom: 2em;
+}
+
+section.normal{
+    background-color: white;
+}
+
+section.imagem{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.514); /*Inset dá uma sombra pra dentro.*/
+    background-attachment: fixed; /*Aqui dá o efeito paralaxe. A imagem fica fixa e o texto rola.*/
+}
+
+section.imagem > p{ /*Todo parágrafo que tem dentro da section que tem a classe imagem.*/
+    display: inline-block; /*Caixa se adapata ao taamnho do conteúdo.*/
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1.5px 1.5px 0px black;
+}
+
+section#img01{
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center; /*Posiciona na parte central direita da imagem.*/
+    background-size: cover; /*Melhora o tamanho quando aumenta e diminui a tela*/
+}
+
+section#img02{
+    background-image: url(../imagens/background002.jpg);
+    background-position: right center;
+    background-size: cover;
+}
+
+footer{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
